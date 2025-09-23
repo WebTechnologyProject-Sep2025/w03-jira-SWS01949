@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CWA Help Desk Appointment Form">
+    <meta name="keywords" content="Lab03">
+    <meta name="author" content="Pham Duc Minh Quan">
+    <title>CWA Help Desk Appointment</title>
+</head>
+    <img src="logo.png">
+    <h1>CWA Help Desk Appointment</h1>
+    <p>The Help Desk is also located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+    <p>Check blackboard for when CWA tutors will be there.</p>
+    <form action="submit.php" method="post">
+    <fieldset>
+        <legend>Student details</legend>
+        <label for="StudentID">Student ID:</label>
+        <input type="text" id="StudentID" name="StudentID" required
+            pattern="\d{7,10}">
+        <br>
+        <label for="givenname">Given Name:</label>
+        <input type="text" id="givenname" name="givenname" required
+            pattern="[A-z]+">
+        <label for="FamilyName">Family Name:</label>
+        <input type="text" id="FamilyName" name="FamilyName" required
+            pattern="[A-z]+">
+    </fieldset>
+    <fieldset>
+        <input type="radio" id="COS10011" name="unit" value="COS10011" required>
+        <label for="COS10011">COS10011</label>
+        <input type="radio" id="COS60004" name="unit" value="COS60004">
+        <label for="COS60004">COS60004</label>
+        <input type="radio" id="COS60007" name="unit" value="COS60007">
+        <label for="COS60007">COS60007</label>
+        <br>
+        <label for="tutor">Your Tutor:</label>
+        <select id="tutor" name="tutor">
+            <option value="">Please Select</option>
+            <option value="Tutor1">Osama Bin Laden</option>
+            <option value="Tutor2">Adolf Hitler</option>
+            <option value="Tutor3">The predator</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Issue</legend>
+        	<input type="checkbox" id="HTML" name="category[]" value="HTML" checked="checked"/>
+            <label for="HTML">HTML</label> 
+				<input type="checkbox" id="css" name="category[]" value="css"/>
+			<label for="css">CSS</label> 
+				<input type="checkbox" id="javascript" name="category[]" value="javascript"/>
+            <label for="javascript">JAVASCRIPT</label> 
+				<input type="checkbox" id="php" name="category[]" value="php"/>
+            <label for="php">PHP</label> 
+				<input type="checkbox" id="mysql" name="category[]" value="mysql"/>
+            <label for="mysql">MySQL</label> 
+            		<p><label for="description">Description of Issue</label></p>
+			<textarea id="description" name="description" rows="4" cols="40"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Preffered Date / Time</legend>
+        		<p><label for="dob">Date of Birth</label> 
+			<input type="text" name= "dob" id="dob" placeholder="dd-mm-yyyy"
+            pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}"/>
+            	<p><label for="time">Time</label> 
+			<input type="text" name= "time" id="time" placeholder="hh:mm"
+             pattern="([01][0-9]|2[0-3]):[0-5][0-9]"/>
+    </fieldset>
+	<input type= "submit" value="Book"/>
+	<input type= "reset" value="Reset Form"/>
+</form>
+</html>
